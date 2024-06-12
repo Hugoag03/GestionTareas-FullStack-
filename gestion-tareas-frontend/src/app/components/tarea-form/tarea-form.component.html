@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <h2>{{tarea.id ? 'Editar' : 'Nueva'}}</h2>
+    <form (ngSubmit)="onSaveTarea()">
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" [(ngModel)]="tarea.titulo" name="titulo" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea class="form-control" name="descripcion" id="descripcion" rows="4" [(ngModel)]="tarea.descripcion" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="completado">Completado</label>
+            &nbsp;
+            <input type="checkbox" id="completado" [(ngModel)]="tarea.completado" name="completado" required>
+        </div>
+        <button type="submit" class="btn btn-primary">{{tarea.id ? 'Actualizar' : 'Guardar'}}</button>
+    </form>
+</div>

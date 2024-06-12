@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/tareas")
+@CrossOrigin("*")
 public class TareaController {
 
     @Autowired
